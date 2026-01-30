@@ -1,226 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Junior | Web Designer & E-commerce Specialist</title>
+<title>Junior | Shopify & E-commerce Web Designer</title>
 
+<!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
+<!-- ===== GOOGLE ANALYTICS (EDIT HERE) =====
+Replace G-XXXXXXXXXX with your real ID
+----------------------------------------- -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
 <style>
-:root {
-  --bg: #0b0b0b;
-  --soft: #141414;
-  --card: #1c1c1c;
-  --text: #ffffff;
-  --muted: #b0b0b0;
-  --accent: #25D366;
+:root{
+  --bg:#0a0a0a;
+  --dark:#111;
+  --card:#181818;
+  --text:#fff;
+  --muted:#9c9c9c;
+  --accent:#25D366;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif;}
+body{background:var(--bg);color:var(--text);}
 
-body {
-  background: var(--bg);
-  color: var(--text);
+/* NAV */
+nav{
+  position:fixed;top:0;width:100%;
+  padding:22px 80px;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(10,10,10,.9);
+  backdrop-filter:blur(10px);
+  z-index:100;
 }
+nav a{color:white;text-decoration:none;margin-left:30px;font-size:14px}
 
-section {
-  padding: 100px 80px;
+/* LOGO */
+.logo{
+  font-weight:800;
+  letter-spacing:1px;
 }
 
 /* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.hero{
+  min-height:100vh;
+  padding:160px 80px;
 }
-
-.hero h1 {
-  font-size: 58px;
-  font-weight: 800;
-  max-width: 900px;
+.hero h1{
+  font-size:64px;
+  max-width:950px;
+  font-weight:800;
 }
-
-.hero p {
-  margin-top: 20px;
-  max-width: 600px;
-  color: var(--muted);
-  font-size: 18px;
+.hero p{
+  margin-top:24px;
+  max-width:620px;
+  color:var(--muted);
+  font-size:18px;
 }
-
-/* WHATSAPP BUTTON */
-.whatsapp-btn {
-  margin-top: 35px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--accent);
-  color: #000;
-  padding: 16px 30px;
-  font-weight: 600;
-  text-decoration: none;
-  width: fit-content;
-  border-radius: 4px;
+.cta{
+  margin-top:40px;
+  display:inline-block;
+  padding:16px 36px;
+  background:var(--accent);
+  color:#000;
+  font-weight:600;
+  text-decoration:none;
 }
 
 /* SECTIONS */
-.dark {
-  background: var(--soft);
-}
-
-.section-title {
-  font-size: 38px;
-  margin-bottom: 20px;
-}
-
-.section-text {
-  max-width: 650px;
-  color: var(--muted);
-}
+section{padding:120px 80px;}
+.dark{background:var(--dark);}
+h2{font-size:42px;margin-bottom:20px;}
+.section-text{max-width:680px;color:var(--muted);}
 
 /* GRID */
-.grid {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+.grid{
+  margin-top:60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.card{
+  background:var(--card);
+  padding:40px;
+  transition:.3s;
+}
+.card:hover{transform:translateY(-8px);}
+.card strong{font-size:18px;}
+.card span{display:block;margin-top:10px;color:var(--muted);}
+
+/* FORM */
+form input, form textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  background:#0f0f0f;
+  border:1px solid #222;
+  color:white;
+}
+form button{
+  background:var(--accent);
+  border:none;
+  padding:14px 30px;
+  font-weight:600;
+  cursor:pointer;
 }
 
-.card {
-  background: var(--card);
-  padding: 35px;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-}
-
-.card a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.card span {
-  display: block;
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 14px;
+/* FLOATING WHATSAPP */
+.float-whatsapp{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:var(--accent);
+  color:#000;
+  padding:14px 22px;
+  font-weight:600;
+  text-decoration:none;
+  border-radius:50px;
+  z-index:200;
 }
 
 /* FOOTER */
-footer {
-  padding: 40px;
-  text-align: center;
-  color: var(--muted);
-  background: #000;
+footer{
+  padding:50px;
+  text-align:center;
+  color:var(--muted);
+  background:#000;
 }
 
 /* MOBILE */
-@media(max-width: 768px) {
-  section {
-    padding: 60px 30px;
-  }
-  .hero h1 {
-    font-size: 42px;
-  }
+@media(max-width:768px){
+  nav,section,.hero{padding:60px 30px}
+  .hero h1{font-size:42px}
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+<nav>
+  <div class="logo">JUNIOR</div>
+  <div>
+    <a href="#services">Services</a>
+    <a href="#work">Case Studies</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
 <!-- HERO -->
 <section class="hero">
-  <h1>Junior – Website Designer & E-commerce Specialist</h1>
+  <h1>We build conversion-focused Shopify & eCommerce websites</h1>
   <p>
-    I design and optimize modern websites that help businesses increase trust,
-    traffic, and sales — with a strong focus on Shopify and e-commerce.
+    Helping online brands increase trust, improve UX, and generate more sales.
   </p>
-
-  <a
-    class="whatsapp-btn"
-    href="https://wa.me/447469307316"
-    target="_blank"
-  >
-    Chat with me on WhatsApp
+  <a class="cta" href="https://wa.me/447469307316" target="_blank">
+    Start a WhatsApp Chat
   </a>
 </section>
 
-<!-- ABOUT -->
-<section class="dark">
-  <h2 class="section-title">About Me</h2>
-  <p class="section-text">
-    I help business owners and brands build clean, professional, and
-    conversion-focused websites. My goal is simple: make your website look
-    trustworthy and turn visitors into paying customers.
-  </p>
+<!-- SERVICES -->
+<section id="services" class="dark">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card">
+      <strong>Shopify Store Design</strong>
+      <span>Modern layouts built to convert traffic.</span>
+    </div>
+    <div class="card">
+      <strong>Store Optimization</strong>
+      <span>UX, speed, and trust optimization.</span>
+    </div>
+    <div class="card">
+      <strong>Landing Pages</strong>
+      <span>High-converting pages for ads.</span>
+    </div>
+  </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section>
-  <h2 class="section-title">My Portfolio</h2>
-
+<!-- CASE STUDIES -->
+<section id="work">
+  <h2>Case Studies</h2>
   <div class="grid">
 
     <div class="card">
-      <a href="https://ijehairandskincares.myshopify.com/" target="_blank">
-        IJE Hair & Skin Cares
-      </a>
-      <span>Shopify store design & optimization</span>
+      <strong>IJE Hair & Skin Cares</strong>
+      <span>Shopify redesign, trust optimization, improved product layout.</span>
     </div>
 
     <div class="card">
-      <a href="https://womansclothing.co.uk" target="_blank">
-        Woman’s Clothing UK
-      </a>
-      <span>E-commerce website design</span>
+      <strong>Woman’s Clothing UK</strong>
+      <span>Fashion store UX improvement & conversion-focused layout.</span>
     </div>
 
     <div class="card">
-      <a href="https://gadgetechsara.com" target="_blank">
-        Gadgetech Sara
-      </a>
-      <span>Product-focused online store</span>
+      <strong>Gadgetech Sara</strong>
+      <span>Product presentation and store structure optimization.</span>
     </div>
 
     <div class="card">
-      <a href="https://1c33h3-1b.myshopify.com" target="_blank">
-        Shopify Demo Store
-      </a>
-      <span>Store layout & UX setup</span>
+      <strong>Shopify Demo Store</strong>
+      <span>Store layout, navigation, and checkout optimization.</span>
     </div>
 
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="dark">
+  <h2>Testimonials</h2>
+  <div class="grid">
+    <div class="card">
+      <span>
+        “Junior completely transformed my store. The design looks professional
+        and sales improved.”
+      </span>
+      <strong>— Store Owner</strong>
+    </div>
+    <div class="card">
+      <span>
+        “Very professional, clear communication, and great results.”
+      </span>
+      <strong>— E-commerce Client</strong>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
-<section class="dark">
-  <h2 class="section-title">Contact</h2>
+<section id="contact">
+  <h2>Contact Me</h2>
   <p class="section-text">
     WhatsApp: <strong>+44 7469 307316</strong>
   </p>
 
-  <a
-    class="whatsapp-btn"
-    href="https://wa.me/447469307316"
-    target="_blank"
-  >
-    Message Me on WhatsApp
-  </a>
+  <!-- ===== CONTACT FORM =====
+  Create free form at https://formspree.io
+  Replace YOUR_FORM_ID below
+  --------------------------- -->
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 <footer>
   © 2026 Junior. All rights reserved.
 </footer>
 
+<a class="float-whatsapp" href="https://wa.me/447469307316" target="_blank">
+  WhatsApp
+</a>
+
 </body>
 </html>
+
