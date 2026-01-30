@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Junior | Web Designer & E-commerce Specialist</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0b0b0b;
+  --soft: #141414;
+  --card: #1c1c1c;
+  --text: #ffffff;
+  --muted: #b0b0b0;
+  --accent: #25D366;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+section {
+  padding: 100px 80px;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 58px;
+  font-weight: 800;
+  max-width: 900px;
+}
+
+.hero p {
+  margin-top: 20px;
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  margin-top: 35px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: #000;
+  padding: 16px 30px;
+  font-weight: 600;
+  text-decoration: none;
+  width: fit-content;
+  border-radius: 4px;
+}
+
+/* SECTIONS */
+.dark {
+  background: var(--soft);
+}
+
+.section-title {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  max-width: 650px;
+  color: var(--muted);
+}
+
+/* GRID */
+.grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: var(--card);
+  padding: 35px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card span {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px;
+  text-align: center;
+  color: var(--muted);
+  background: #000;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+  section {
+    padding: 60px 30px;
+  }
+  .hero h1 {
+    font-size: 42px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Junior – Website Designer & E-commerce Specialist</h1>
+  <p>
+    I design and optimize modern websites that help businesses increase trust,
+    traffic, and sales — with a strong focus on Shopify and e-commerce.
+  </p>
+
+  <a
+    class="whatsapp-btn"
+    href="https://wa.me/447469307316"
+    target="_blank"
+  >
+    Chat with me on WhatsApp
+  </a>
+</section>
+
+<!-- ABOUT -->
+<section class="dark">
+  <h2 class="section-title">About Me</h2>
+  <p class="section-text">
+    I help business owners and brands build clean, professional, and
+    conversion-focused websites. My goal is simple: make your website look
+    trustworthy and turn visitors into paying customers.
+  </p>
+</section>
+
+<!-- PORTFOLIO -->
+<section>
+  <h2 class="section-title">My Portfolio</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <a href="https://ijehairandskincares.myshopify.com/" target="_blank">
+        IJE Hair & Skin Cares
+      </a>
+      <span>Shopify store design & optimization</span>
+    </div>
+
+    <div class="card">
+      <a href="https://womansclothing.co.uk" target="_blank">
+        Woman’s Clothing UK
+      </a>
+      <span>E-commerce website design</span>
+    </div>
+
+    <div class="card">
+      <a href="https://gadgetechsara.com" target="_blank">
+        Gadgetech Sara
+      </a>
+      <span>Product-focused online store</span>
+    </div>
+
+    <div class="card">
+      <a href="https://1c33h3-1b.myshopify.com" target="_blank">
+        Shopify Demo Store
+      </a>
+      <span>Store layout & UX setup</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="dark">
+  <h2 class="section-title">Contact</h2>
+  <p class="section-text">
+    WhatsApp: <strong>+44 7469 307316</strong>
+  </p>
+
+  <a
+    class="whatsapp-btn"
+    href="https://wa.me/447469307316"
+    target="_blank"
+  >
+    Message Me on WhatsApp
+  </a>
+</section>
+
+<footer>
+  © 2026 Junior. All rights reserved.
+</footer>
+
+</body>
+</html>
